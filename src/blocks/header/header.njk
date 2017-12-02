@@ -1,0 +1,18 @@
+{% set header = {
+	"image": "images/logo.png",
+	"title": "Сайт по строительству",
+	"phone": "+7 (495) 221-14-55",
+	"text": "Ремонт квартир и офисов в Москве и области"
+}%}
+
+<div class="header">
+	<div class="container">
+		<div class="header__wrapper clearfix">
+			<a href="/" class="logo">
+				<img src="{{ header.image }}" class="logo__image" alt="{{ header.title }}" />
+			</a>
+			<div class="header__contact">{{ header.phone }}</div>
+			<div class="header__text">{{ header.text }}</div>
+		</div>
+	</div>
+</div>

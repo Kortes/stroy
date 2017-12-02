@@ -1,0 +1,98 @@
+{% set projects = {
+	"title": "Наши проекты",
+	"list": [
+		{
+			"title": "Ремонт квартиры на улице Горчакова",
+			"list": [
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300/ff0000"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x500"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/500x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				}
+			]
+		},
+		{
+			"title": "Ремонт квартиры на улице Горчакова2",
+			"list": [
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300/ff0000"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x500"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/500x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				},
+				{
+					"big": "images/promo.jpg",
+					"small": "http://via.placeholder.com/300x300"
+				}
+			]
+		}
+	]
+}%}
+
+<div class="projects">
+	<div class="container">
+		<div class="projects__title">{{ projects.title }}</div>
+		{% for project in projects.list %}
+			{% set index = loop.index %}
+			<div class="project">
+				<div class="project__title">{{ project.title }}</div>
+				<div class="project__list">
+					{% for item in project.list %}
+						<a href="{{ item.big }}" rel="group_{{ index }}" class="project__link">
+							<img src="{{ item.small }}" alt="" class="project__image">
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

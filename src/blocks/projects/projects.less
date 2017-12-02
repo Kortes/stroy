@@ -1,0 +1,41 @@
+@import "../base/var";
+
+.projects__title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #52535d;
+  padding: 80px 0 30px;
+}
+
+.project{
+  padding-bottom: 60px;
+
+  &__title{
+    padding-bottom: 45px;
+    font-weight: bold;
+    font-size: 21px;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link{
+    width: 25%;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

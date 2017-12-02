@@ -1,0 +1,78 @@
+@import "../base/var";
+
+.about{
+  text-align: center;
+  background: #ff7c66;
+  color: #fff;
+  padding-top: 50px;
+
+  &__title{
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__item{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px 40px;
+    width: 25%;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.42;
+    // background: url(../images/phone.png) no-repeat center top;
+  }
+
+  &__number{
+    font-size: 60px;
+    font-weight: bold;
+    
+    span{
+      font-size: 40px;
+    }
+
+    &:after{
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 15px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &_doc:after{
+      background: url(../images/phone.png) no-repeat center;
+    }
+
+    &_calc:after{
+      background: #f00;
+    }
+
+    &_repost:after{
+      background: #0f0;
+    }
+
+    &_time:after{
+      background: #00f;
+    }
+
+    &_user:after{
+      background: #ff0;
+    }
+
+    &_ok:after{
+      background: #0ff;
+    }
+  }
+
+  &__text{
+    color: #3c3c3c;
+  }
+}

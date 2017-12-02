@@ -1,0 +1,18 @@
+{% set footer = {
+	"image": "images/logo.png",
+	"title": "Сайт по строительству",
+	"phone": "+7 (495) 221-14-55",
+	"text": "Ремонт квартир и офисов в Москве и области"
+}%}
+
+<div class="footer">
+	<div class="container">
+		<div class="footer__wrapper clearfix">
+			<a href="/" class="logo">
+				<img src="{{ footer.image }}" class="logo__image" alt="{{ footer.title }}" />
+			</a>
+			<div class="footer__contact">{{ footer.phone }}</div>
+			<div class="footer__text">{{ footer.text }}</div>
+		</div>
+	</div>
+</div>

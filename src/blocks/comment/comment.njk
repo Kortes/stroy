@@ -1,0 +1,55 @@
+{% set comment = {
+	"title": "Отзывы наших клиентов",
+	"column": [
+		{
+			"list": [
+				{
+					"text": "Раскрутка переворачивает институциональный анализ зарубежного опыта, невзирая на действия конкурентов. Рекламная заставка, как следует из вышесказанного, существенно допускает социометрический отраслевой стандарт, работая над проектом. Представляется логичным, что ретроконверсия национального наследия неверно экономит CTR, не считаясь с затратами.",
+					"profile": {
+						"image": "http://via.placeholder.com/74x74/00ff00",
+						"name": "Соловых Пётр Васильевич",
+						"city": "Новочеркасск"
+					}
+				}
+			]
+		},
+		{
+			"list": [
+				{
+					"text": "Раскрутка переворачивает институциональный анализ зарубежного опыта, невзирая на действия конкурентов. Рекламная заставка, как следует из вышесказанного, существенно допускает социометрический отраслевой стандарт, работая над проектом. Представляется логичным, что ретроконверсия национального наследия неверно экономит CTR, не считаясь с затратами.",
+					"profile": {
+						"image": "http://via.placeholder.com/74x74/00ff00",
+						"name": "Соловых Пётр Васильевич",
+						"city": "Новочеркасск"
+					}
+				}
+			]
+		}
+	]
+}%}
+
+<div class="comment">
+	<div class="container">
+		<div class="comment__title">{{ comment.title }}</div>
+		<div class="comment__row">
+			{% for column in comment.column %}
+				<div class="comment__column">
+					{% for item in column.list %}
+						<div class="comment__item">
+							<div class="comment__text">{{ item.text }}</div>
+							<div class="comment__profile">
+								<div class="comment__image">
+									<img src="{{ item.profile.image }}" alt="{{ item.profile.name }}" class="comment__img">
+								</div>
+								<div class="comment__info">
+									<div class="comment__name">{{ item.profile.name }}</div>
+									<div class="comment__city">{{ item.profile.city }}</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

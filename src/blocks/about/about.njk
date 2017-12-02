@@ -1,0 +1,49 @@
+{% set about = {
+	"title": "Мы в цифра",
+	"list": [
+		{
+			"name": "doc",
+			"number": "854",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов"
+		},
+		{
+			"name": "calc",
+			"number": "1",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов"
+		},
+		{
+			"name": "repost",
+			"number": "45<span>%</span>",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов. Рекламных объявлений — средний размер кампании для наших клиентов."
+		},
+		{
+			"name": "time",
+			"number": "854",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов"
+		},
+		{
+			"name": "user",
+			"number": "854",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов"
+		},
+		{
+			"name": "ok",
+			"number": "854",
+			"text": "Рекламных объявлений — средний размер кампании для наших клиентов"
+		}
+	]
+}%}
+
+<div class="about">
+	<div class="container">
+		<div class="about__title">{{ about.title }}</div>
+		<ul class="about__list">
+			{% for item in about.list %}
+				<li class="about__item">
+					<div class="about__number about__number_{{ item.name }}">{{ item.number | safe }}</div>
+					<div class="about__text">{{ item.text }}</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

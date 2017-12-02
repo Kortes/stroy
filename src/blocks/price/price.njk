@@ -1,0 +1,75 @@
+{% set price = {
+	"title": "Наши цены",
+	"tarifs": [
+		{
+			"type": "standart",
+			"name": "Стандартный",
+			"cost": "6 999",
+			"popup": "tarif",
+			"list": [
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"}
+			]
+		},
+		{
+			"type": "max",
+			"name": "Максимальный",
+			"cost": "26 999",
+			"popup": "tarif",
+			"list": [
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111", "strong": true},
+				{"text": "11111", "strong": true}
+			]
+		},
+		{
+			"type": "pro",
+			"name": "Продвинутый",
+			"cost": "16 999",
+			"popup": "tarifPro",
+			"list": [
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111"},
+				{"text": "11111", "strong": true}
+			]
+		}
+	]
+}%}
+
+<div class="price">
+	<div class="container">
+		<div class="price__title">Наши цены</div>
+		<div class="price__wrapper">
+			{% for tarif in price.tarifs %}
+				<div class="price__tarif price__tarif_{{ tarif.type }}">
+					<div class="price__header">
+						Тариф
+						<div class="price__name">{{ tarif.name }}</div>
+						<div class="price__cost">{{ tarif.cost }}</div>
+					</div>
+					<ul class="price__list">
+						{% for item in tarif.list %}
+							<li class="price__item {% if item.strong %}price__item_strong{% endif %}">{{ item.text }}</li>
+						{% endfor %}
+					</ul>
+					<div class="price__footer">
+						<a href="#{{ tarif.popup }}" class="price__button">Заказать</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

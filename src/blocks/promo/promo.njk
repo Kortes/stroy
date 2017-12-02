@@ -1,0 +1,41 @@
+{% set promo = {
+	"text": "Уникальная акция! Приносите свой старый телефон и мы обменяем его на новый! Действие предложения ограничено!!!",
+	"timer": "2018-01-01",
+	"form": {
+		"legend": "Отправьте заявку на бесплатный дизайн-проект",
+		"list": [
+			{
+				"label": "Ваше имя",
+				"name": "name"
+			},
+			{
+				"label": "Номер телефона",
+				"name": "phone"
+			}
+		]
+	}
+}%}
+
+<div class="promo">
+	<div class="container">
+		<div class="promo__title">
+			Дизайн-проект вашего нового интерьера
+			<div class="promo__title-yellow">мы сделаем Бесплатно!</div>
+		</div>
+		<div class="promo__text">{{ promo.text }}</div>
+		<div class="promo__timer" data-date="{{ promo.timer }}"></div>
+		<form class="promo__form" method="post" action="#">
+			<legend class="promo__legend">{{ promo.form.legend }}</legend>
+			{% for item in promo.form.list %}
+				<div class="promo__form-line">
+					<label for="{{ item.name }}" class="promo__form-label">{{ item.label }}</label>
+					<input type="text" name="{{ item.name }}" id="{{ item.name }}" class="promo__form-input promo__form-input_{{ item.name }}">
+				</div>
+			{% endfor %}
+			<button type="submit" class="promo__form-button">
+				Отправить заявку
+				<span class="promo__form-arrow"></span>
+			</button>
+		</form>
+	</div>
+</div>

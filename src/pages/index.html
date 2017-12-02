@@ -1,0 +1,17 @@
+{% extends "base/base.njk" %}
+
+{% block title %}Сайт по строительству{% endblock %}
+
+{% block content %}
+	{% include 'promo/promo.njk' %}
+	{% include 'about/about.njk' %}
+	{% include 'projects/projects.njk' %}
+	{% include 'comment/comment.njk' %}
+	{% include 'price/price.njk' %}
+	{% include 'promo/promo.njk' %}
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="vendor/fancybox/fancybox.js"></script>
+    <script type="text/javascript" src="vendor/TimeCircles/inc/TimeCircles.js"></script>
+{% endblock %}

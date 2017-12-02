@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    {% block head %}
+      <title>{% block title %}{% endblock %}</title>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <meta name="description" content=""/>
+      <meta name="keywords" content=""/>
+      <meta name="copyright" content="(c)"> 
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+      <meta http-equiv="cleartype" content="on"/>
+      <meta name="format-detection" content="telephone=no"/>
+      <meta name="format-detection" content="address=no"/>
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" href="css/main.css" />
+    {% endblock %}
+</head>
+<body class="page">
+    <div class="page__inner">
+      {% block header %}
+        {% include 'header/header.njk' %}
+      {% endblock %}
+      {% block content %}{% endblock %}
+      <div class="page__footer"></div>
+    </div>
+    {% block footer %}
+      {% include 'footer/footer.njk' %}
+    {% endblock %}
+    {% block fancybox %}
+      <div class="fancybox">
+        {% include 'fancybox/fancybox.njk' %}
+      </div>
+    {% endblock %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {% block script %}{% endblock %}
+    <script type="text/javascript" src='js/main.js'></script>
+</body>
+</html>

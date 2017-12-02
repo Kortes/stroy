@@ -1,0 +1,132 @@
+@import "../base/var";
+
+.comment{
+  background: #f0edeb;
+  padding-top: 70px;
+
+  &__title{
+    color: #52535d;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__row{
+    font-size: 0;
+    // padding: 50px 85px; 
+    padding: 50px 100px;
+  }
+
+  &__column{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: 14px;
+    line-height: 22px;
+    box-sizing: border-box;
+    // padding: 0 15px;
+
+    &:first-child{
+      padding-right: 15px;
+    }
+
+    &:last-child{
+      padding-left: 15px;
+    }
+  }
+
+  &__item{
+    margin-bottom: 40px;
+  }
+
+  &__image,
+  &__info{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__profile{
+    margin-top: 20px;
+  }
+
+  &__image{
+    margin: 0 20px 0 40px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0 1px #d0cece;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 74px;
+    height: 74px;
+    position: relative;
+  }
+
+  &__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__city{
+    color: #52535d;
+  }
+
+  &__name{
+    font-weight: 500;
+  }
+
+  &__text{
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    filter: drop-shadow(0 2px 2px #e4e4e4);
+    position: relative;
+  }
+
+  //  &__text:before,
+  //  &__text:after{
+  //   content: "";
+  //   position: absolute;
+  //   width: 10px;
+  //   height: 10px;
+  //   background: #fff;
+  //   transform: translateY(-50%) rotate(45deg);
+  //   left: 75px;
+  //   top: 100%;
+  // }
+  //
+  //  &__text:before{
+  //   background: #e4e4e4;
+  //   margin-top: 2px;
+  // }
+  //
+  //  &__text:before,
+  //  &__text:after{
+  //   content: "";
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 8px solid #fff;
+  //   border-left: 8px solid transparent;
+  //   border-right: 8px solid transparent;
+  //   left: 75px;
+  //   top: 100%;
+  // }
+  //
+  //  &__text:before{
+  //   border-top-color: #e4e4e4;
+  //   margin-top: 2px;
+  // }
+
+  &__text:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: translateY(-50%) rotate(45deg);
+    left: 75px;
+    top: 100%;
+  }
+}
